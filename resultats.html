@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simulation Results</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 40px auto; background: #f4f4f9; padding: 20px; text-align: center; }
+        .results-box { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-bottom: 20px; }
+        h2 { color: #4CAF50; }
+        img { max-width: 100%; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        a { text-decoration: none; color: #2196F3; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>📊 Simulation Results</h1>
+    <div class="results-box">
+        <h2>Total Energy: {{ energie }} kWh / day</h2>
+        <h3>Estimated Cost: {{ cout }} DH / day</h3>
+    </div>
+    <div class="results-box">
+        <h3>Power Consumption Profile P(t)</h3>
+        <img src="{{ url_for('static', filename='courbe.png') }}" alt="Consumption Graph">
+    </div>
+    <a href="/">← Run Another Simulation</a>
+</body>
+</html>
